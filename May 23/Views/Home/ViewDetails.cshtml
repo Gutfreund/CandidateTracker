@@ -1,0 +1,23 @@
+﻿@using May_23.Controllers
+@using May_23.Models
+@model Candidate
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 well">
+        <h4>Name: @Model.FirstName @Model.LastName</h4>
+        <h4>Email: @Model.Email</h4>
+        <h4>Phone: @Model.Phone</h4>
+        <h4>Status: @Model.Status</h4>
+        <h4>Notes:</h4>
+        <p>@Model.Notes</p>
+        <div id="buttons">
+            <button class="btn btn-primary" Data-id="@Model.Id" id="confirm-button">Confirm</button>
+            <button class="btn btn-danger" Data-id="@Model.Id" id="refuse-button">Refuse</button>
+        </div>
+        <br />
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/JavaScript.js"></script>
+}

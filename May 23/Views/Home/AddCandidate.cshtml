@@ -1,0 +1,27 @@
+﻿@using May_23.Controllers
+@using May_23.Models
+@model Candidate
+
+<br />
+<br />
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 well">
+        <form method="post" action="/Home/AddCandidate">
+            <input class="form-control" type="text" name="FirstName" placeholder="First Name" />
+            <br />
+            <input class="form-control" type="text" name="LastName" placeholder="Last Name" />
+            <br />
+            <input class="form-control" type="text" name="Email" placeholder="Email" />
+            <br />
+            <input class="form-control" type="text" name="Phone" placeholder="Phone Number" />
+            <br />
+            <textarea class="form-control" name="Notes" rows="10" placeholder="Notes"></textarea>
+            <br />
+            <button class="btn btn-warning">Add Candidate</button>
+        </form>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/JavaScript.js"></script>
+}

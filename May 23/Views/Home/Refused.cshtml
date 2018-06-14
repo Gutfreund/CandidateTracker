@@ -1,0 +1,34 @@
+﻿@using May_23.Controllers
+@using May_23.Models
+@model IEnumerable<Candidate>
+
+<br />
+<br />
+<h2>Refused</h2>
+<br />
+<button class="btn btn-success">Toggle Notes</button>
+<br />
+<br />
+<table class="table table-bordered" id="refused-table">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th class="notes">Notes</th>
+    </tr>
+    @foreach (Candidate c in Model)
+    {
+        <tr>
+            <td>@c.FirstName</td>
+            <td>@c.LastName</td>
+            <td>@c.Email</td>
+            <td>@c.Phone</td>
+            <td class="notes">@c.Notes</td>
+        </tr>
+    }
+</table>
+
+@section scripts{
+    <script src="~/Scripts/JavaScript.js"></script>
+}

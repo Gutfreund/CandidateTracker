@@ -1,0 +1,31 @@
+﻿@using May_23.Controllers
+@using May_23.Models
+@model IEnumerable<Candidate>
+
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>View Details</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    @foreach (Candidate c in Model)
+    {
+        <tr>
+            <td>
+                <a href="/Home/ViewDetails?candidateId=@c.Id">View Details</a>
+            </td>
+            <td>@c.FirstName</td>
+            <td>@c.LastName</td>
+            <td>@c.Email</td>
+            <td>@c.Phone</td>
+        </tr>
+    }
+</table>
+
+@section scripts{
+    <script src="~/Scripts/JavaScript.js"></script>
+}
